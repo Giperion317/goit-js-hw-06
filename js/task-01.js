@@ -25,4 +25,4 @@ const itemCategories = listCategories.querySelectorAll('.item');
 for (const element of itemCategories) {
   console.log(`Category: ${element.firstElementChild.textContent}`);
   console.log(`Elements: ${element.lastElementChild.children.length}`);
-}
+};

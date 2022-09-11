@@ -24,6 +24,4 @@ const itemImage = images.map(image =>
   `<li><img src="${image.url}" alt="${image.alt}"></li>`
 ).join('');
 
-console.log(itemImage)
-
 listGallery.insertAdjacentHTML("beforeend", itemImage);

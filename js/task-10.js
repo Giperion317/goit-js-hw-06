@@ -47,8 +47,10 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   const newBox = document.querySelectorAll('.new-box');
-  
+
   newBox.forEach(el => {
     el.remove();
   });
+
+  location.reload();
 }

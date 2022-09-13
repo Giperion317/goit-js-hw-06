@@ -33,15 +33,16 @@ destroyBtn.addEventListener('click', destroyBoxes);
 function createBoxes(amount) {
   const amountBoxes = amount.target.value;
   createBtn.addEventListener('click', () => {
+    const divs = [];
     for (let i = 0; i < amountBoxes; i += 1) {
       const div = document.createElement('div');
       div.classList.add('new-box');
       div.style.width = '30px';
       div.style.height = '30px';
       div.style.backgroundColor = getRandomHexColor();
-
-      boxes.appendChild(div);
+      divs.push(div)
     };
+    boxes.append(...divs);
   });
 };
 
@@ -52,5 +53,5 @@ function destroyBoxes() {
     el.remove();
   });
 
-  location.reload();
+  location.reload(); 
 }
